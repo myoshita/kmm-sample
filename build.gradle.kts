@@ -5,13 +5,15 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0")
-        classpath("com.android.tools.build:gradle:7.2.1")
+        classpath(libs.kotlin.gradlePlugin)
+        classpath(libs.android.gradlePlugin)
+        classpath(libs.buildKonfig.gradlePlugin)
+        classpath(libs.hilt.gradlePlugin)
     }
 }
 
 plugins {
-    kotlin("native.cocoapods") version "1.7.0"
+    kotlin("native.cocoapods") version libs.versions.kotlin.get()
 }
 
 allprojects {
